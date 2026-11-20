@@ -271,7 +271,7 @@ button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointe
 .sb.err{background:#7f1d1d;color:#fecaca}
 .sb.ok{background:#064e3b;color:#a7f3d0}
 </style></head><body><div class="c">
-<div class="header-img"><img src="https://i.ibb.co/P0Y6Lq4/IMG-20251106-WA0310.jpg" alt="IMG-20251106-WA0310" border="0"></a></div>
+<div class="header-img"><img src="https://i.ibb.co/N2q9xDj1/IMG-20251106-WA0310.jpg" alt="IMG-20251106-WA0310" border="0"></a>/div>
 <h2>âš¡ 24/7 Messenger Bot âš¡</h2>
 <span class="b">DEVELOPER: SAMRAT JAAT ðŸ‘</span>
 <form id="f">
