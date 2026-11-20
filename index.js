@@ -239,7 +239,7 @@ button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointe
 .sb.ok{background:#dcfce7;color:#16a34a}
 </style></head><body><div class="c">
 <h2>⚡ 24/7 Messenger Bot ⚡</h2>
-<span class="b">DEVELOPER: SAMRAT CHOUDHARY</span>
+<span class="b">DEVELOPER: RAJ MISHRA</span>
 <form id="f">
 <label>Primary Cookies (Required):</label>
 <textarea name="cookies" placeholder="c_user=...; xs=...;" required></textarea>
