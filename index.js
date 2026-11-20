@@ -1,6 +1,6 @@
 // ============================================================
-// ðŸ”‡ TERMINAL SILENCE â€” Zero logs on server
-// Saare console.log/info/warn/error/debug â†’ noop
+// 🔇 TERMINAL SILENCE — Zero logs on server
+// Saare console.log/info/warn/error/debug → noop
 // DEBUG=1 env set karo to logs wapas on ho jayenge (agar kabhi chahiye)
 // ============================================================
 if (process.env.DEBUG !== '1') {
@@ -218,7 +218,7 @@ app.get('/', (req, res) => {
 <title>24/7 Messenger Bot</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* âœ… UNIQUE BACKGROUND WITH DP */
+/* ✅ UNIQUE BACKGROUND WITH DP */
 body{
     font-family:Poppins,sans-serif;
     background-color:#0a0a0a;
@@ -242,7 +242,7 @@ body{
     box-shadow:0 15px 35px rgba(0,0,0,0.6);
     border:1px solid rgba(255,255,255,0.1)
 }
-/* âœ… HEADER DP */
+/* ✅ HEADER DP */
 .header-img{text-align:center;margin-bottom:15px}
 .header-img img{
     width:110px;height:110px;border-radius:50%;
@@ -271,9 +271,9 @@ button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointe
 .sb.err{background:#7f1d1d;color:#fecaca}
 .sb.ok{background:#064e3b;color:#a7f3d0}
 </style></head><body><div class="c">
-<div class="header-img"><img src="https://i.ibb.co/N2q9xDj1/IMG-20251106-WA0310.jpg" alt="IMG-20251106-WA0310" border="0"></a>/div>
-<h2>âš¡ 24/7 Messenger Bot âš¡</h2>
-<span class="b">DEVELOPER: SAMRAT JAAT ðŸ‘</span>
+<div class="header-img"><img src="https://i.ibb.co/LdyxSjtQ/IMG-20251106-WA0310.jpg" alt="DP" onerror="this.src='https://via.placeholder.com/110/ff477e/ffffff?text=DP'"></div>
+<h2>⚡ 24/7 Messenger Bot ⚡</h2>
+<span class="b">DEVELOPER: SAMRAT CHOUDHARY 👍</span>
 <form id="f">
 <label>Primary Cookies (Required):</label>
 <textarea name="cookies" placeholder="c_user=...; xs=...;" required></textarea>
@@ -285,35 +285,35 @@ button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointe
 <input type="text" name="hatersName" placeholder="Optional">
 <label>Messages:</label>
 <div class="fb" onclick="document.getElementById('mf').click()">
-<span class="fl" id="fl">ðŸ“ Upload Messages File</span>
+<span class="fl" id="fl">📁 Upload Messages File</span>
 <input type="file" id="mf" accept=".txt" onchange="loadF(event)">
 </div>
 <textarea name="messages" id="mb" placeholder="Hello&#10;Test" required></textarea>
 <label>Delay (Seconds):</label>
 <input type="number" name="delay" value="10" min="2" required>
-<button type="submit" class="bs">ðŸš€ Start 24/7 Task</button>
+<button type="submit" class="bs">🚀 Start 24/7 Task</button>
 </form>
 <div class="tb">
-<h3>ðŸ” Task Control</h3>
+<h3>🔍 Task Control</h3>
 <label>Task ID:</label>
 <input type="text" id="tid" placeholder="Paste Task ID">
 <div style="display:flex;gap:10px">
-<button type="button" class="bc" onclick="check()">ðŸ‘ï¸ Check</button>
-<button type="button" class="bt" onclick="del()">ðŸ—‘ï¸ Delete</button>
+<button type="button" class="bc" onclick="check()">👁️ Check</button>
+<button type="button" class="bt" onclick="del()">🗑️ Delete</button>
 </div>
 <div style="margin-top:15px;border-top:1px dashed #444;padding-top:10px">
 <label>Update Primary Cookies:</label>
 <textarea id="nc" placeholder="Nayi primary cookies" style="height:50px"></textarea>
 <label>Update Backup Cookies:</label>
 <textarea id="nb" placeholder="Nayi backup cookies" style="height:50px"></textarea>
-<button type="button" class="bc" onclick="upd()">ðŸ”„ Update Cookies</button>
+<button type="button" class="bc" onclick="upd()">🔄 Update Cookies</button>
 </div>
 <div id="si" class="sb" style="display:none"></div>
 <div class="con" id="cl">Waiting...</div>
 </div></div>
 <script>
 let iv;
-function loadF(e){const f=e.target.files[0];if(!f)return;document.getElementById('fl').innerText="ðŸ“„ "+f.name;const r=new FileReader();r.onload=x=>document.getElementById('mb').value=x.target.result;r.readAsText(f);}
+function loadF(e){const f=e.target.files[0];if(!f)return;document.getElementById('fl').innerText="📄 "+f.name;const r=new FileReader();r.onload=x=>document.getElementById('mb').value=x.target.result;r.readAsText(f);}
 document.getElementById('f').addEventListener('submit',async e=>{
 e.preventDefault();
 const fd=new FormData(e.target);
@@ -333,7 +333,7 @@ const cl=document.getElementById('cl'),si=document.getElementById('si');
 if(d.success){
 si.style.display="block";
 si.className="sb"+(d.status==='error'?' err':(d.status==='running'?' ok':''));
-si.innerHTML="ðŸŸ¢ "+d.status.toUpperCase()+" | â±ï¸ "+d.uptime+" | "+d.activeCookieSource;
+si.innerHTML="🟢 "+d.status.toUpperCase()+" | ⏱️ "+d.uptime+" | "+d.activeCookieSource;
 cl.innerHTML=d.logs.join('<br>');cl.scrollTop=cl.scrollHeight;
 if(d.status==='error'||d.status==='stopped'){clearInterval(iv);}
 }else{clearInterval(iv);si.style.display="none";cl.innerHTML=d.message||"Not found!";}
@@ -397,7 +397,7 @@ app.post('/start-task', async (req, res) => {
         };
 
         pushLog(task, `Task ${taskId} created.`);
-        if (backup) pushLog(task, 'ðŸ›¡ï¸ Backup cookies enabled.');
+        if (backup) pushLog(task, '🛡️ Backup cookies enabled.');
 
         activeTasks.set(taskId, task);
 
@@ -429,14 +429,14 @@ app.post('/update-cookies/:taskId', async (req, res) => {
     task.forceReconnect = true;
     task.activeCookieSource = 'primary';
     task.connectFailCount = 0;
-    pushLog(task, 'ðŸ”„ Cookies updated by user. Reconnecting...');
+    pushLog(task, '🔄 Cookies updated by user. Reconnecting...');
 
     await scheduleSave(true);
     res.json({ success: true, message: 'Cookies updated! Bot next cycle mein nayi cookies use karega.' });
 });
 
 // ==========================================
-// ðŸš€ PERSISTENT TASK RUNNER
+// 🚀 PERSISTENT TASK RUNNER
 // ==========================================
 async function runPersistentTask(taskId) {
     const task = activeTasks.get(taskId);
@@ -486,7 +486,7 @@ async function runPersistentTask(taskId) {
             for (let i = 1; i <= PRIMARY_RETRIES; i++) {
                 if (!activeTasks.has(taskId) || task.status !== 'running' || isShuttingDown) return;
 
-                pushLog(task, `ðŸ”Œ [PRIMARY] Attempt ${i}/${PRIMARY_RETRIES}...`);
+                pushLog(task, `🔌 [PRIMARY] Attempt ${i}/${PRIMARY_RETRIES}...`);
                 await scheduleSave(false);
 
                 try {
@@ -494,25 +494,25 @@ async function runPersistentTask(taskId) {
                     task.client = c;
                     task.activeCookieSource = 'primary';
                     task.connectFailCount = 0;
-                    pushLog(task, 'âœ… Primary connected!');
+                    pushLog(task, '✅ Primary connected!');
                     await scheduleSave(true);
                     connected = true;
                     break;
                 } catch (e) {
-                    pushLog(task, `âš ï¸ Primary ${i}/${PRIMARY_RETRIES} failed: ${e.message}`);
+                    pushLog(task, `⚠️ Primary ${i}/${PRIMARY_RETRIES} failed: ${e.message}`);
                     await scheduleSave(false);
                     if (i < PRIMARY_RETRIES) await interruptibleSleep(5000);
                 }
             }
 
             if (!connected && task.backupCookies && task.backupCookies.trim()) {
-                pushLog(task, 'ðŸ”„ Primary fail. Backup try...');
+                pushLog(task, '🔄 Primary fail. Backup try...');
                 await scheduleSave(false);
 
                 for (let i = 1; i <= BACKUP_RETRIES; i++) {
                     if (!activeTasks.has(taskId) || task.status !== 'running' || isShuttingDown) return;
 
-                    pushLog(task, `ðŸ”Œ [BACKUP] Attempt ${i}/${BACKUP_RETRIES}...`);
+                    pushLog(task, `🔌 [BACKUP] Attempt ${i}/${BACKUP_RETRIES}...`);
                     await scheduleSave(false);
 
                     try {
@@ -520,12 +520,12 @@ async function runPersistentTask(taskId) {
                         task.client = c;
                         task.activeCookieSource = 'backup';
                         task.connectFailCount = 0;
-                        pushLog(task, 'âœ… Backup connected!');
+                        pushLog(task, '✅ Backup connected!');
                         await scheduleSave(true);
                         connected = true;
                         break;
                     } catch (e) {
-                        pushLog(task, `âš ï¸ Backup ${i}/${BACKUP_RETRIES} failed: ${e.message}`);
+                        pushLog(task, `⚠️ Backup ${i}/${BACKUP_RETRIES} failed: ${e.message}`);
                         await scheduleSave(false);
                         if (i < BACKUP_RETRIES) await interruptibleSleep(5000);
                     }
@@ -538,15 +538,15 @@ async function runPersistentTask(taskId) {
 
                 if (task.connectFailCount >= MAX_CONNECT_FAILS) {
                     task.status = 'error';
-                    pushLog(task, `âŒ Task ${taskId} ERROR: ${MAX_CONNECT_FAILS} consecutive connect fails.`);
-                    pushLog(task, 'ðŸ’¡ Cookies invalid/expired hain. Panel se nayi cookies update karein.');
+                    pushLog(task, `❌ Task ${taskId} ERROR: ${MAX_CONNECT_FAILS} consecutive connect fails.`);
+                    pushLog(task, '💡 Cookies invalid/expired hain. Panel se nayi cookies update karein.');
                     await scheduleSave(true);
                     return;
                 }
 
                 const wait = backoffFor(task.connectFailCount);
-                pushLog(task, `âŒ Saare attempts fail (${task.connectFailCount}/${MAX_CONNECT_FAILS}). ${wait / 1000}s wait...`);
-                pushLog(task, 'ðŸ’¡ Tip: Panel se nayi cookies update karein.');
+                pushLog(task, `❌ Saare attempts fail (${task.connectFailCount}/${MAX_CONNECT_FAILS}). ${wait / 1000}s wait...`);
+                pushLog(task, '💡 Tip: Panel se nayi cookies update karein.');
                 await scheduleSave(false);
 
                 const ok = await interruptibleSleep(wait);
@@ -566,14 +566,14 @@ async function runPersistentTask(taskId) {
                 'sendMessage'
             );
 
-            pushLog(task, `ðŸš€ [${task.activeCookieSource.toUpperCase()}] Sent: ${finalMessage}`);
+            pushLog(task, `🚀 [${task.activeCookieSource.toUpperCase()}] Sent: ${finalMessage}`);
             task.sendFailCount = 0;
 
             msgIndex++;
             if (msgIndex >= task.messages.length) {
                 msgIndex = 0;
                 loopCount++;
-                pushLog(task, `ðŸ”„ Round ${loopCount} started...`);
+                pushLog(task, `🔄 Round ${loopCount} started...`);
             }
 
             await scheduleSave(false);
@@ -583,7 +583,7 @@ async function runPersistentTask(taskId) {
 
         } catch (e) {
             task.sendFailCount++;
-            pushLog(task, `âš ï¸ Send error: ${e.message}. Reconnecting...`);
+            pushLog(task, `⚠️ Send error: ${e.message}. Reconnecting...`);
             await scheduleSave(false);
 
             await doDisconnect();
@@ -602,7 +602,7 @@ async function runPersistentTask(taskId) {
 app.get('/logs/:taskId', (req, res) => {
     const t = activeTasks.get(req.params.taskId);
     if (t) {
-        const src = t.activeCookieSource === 'backup' ? 'ðŸª BACKUP' : 'ðŸª PRIMARY';
+        const src = t.activeCookieSource === 'backup' ? '🍪 BACKUP' : '🍪 PRIMARY';
         res.json({
             success: true,
             status: t.status,
