@@ -1,7 +1,7 @@
 {
   "name": "messenger-247-bot",
   "version": "1.0.0",
-  "description": "24/7 Persistent Messenger Bot developed by Samrat Choudhary",
+  "description": "24/7 Persistent Messenger Bot developed by Raj Mishra",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
