@@ -218,62 +218,28 @@ app.get('/', (req, res) => {
 <title>24/7 Messenger Bot</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-/* ✅ UNIQUE BACKGROUND WITH DP */
-body{
-    font-family:Poppins,sans-serif;
-    background-color:#0a0a0a;
-    background-image:linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://i.ibb.co/KjtjBDRP/file-00000000f49c821197fdc7fcda40847d.png');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    color:#ffffff;
-    padding:20px;
-    margin:0;
-    min-height:100vh
-}
-.c{
-    max-width:680px;
-    margin:auto;
-    background:rgba(20,20,20,0.75);
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.6);
-    border:1px solid rgba(255,255,255,0.1)
-}
-/* ✅ HEADER DP */
-.header-img{text-align:center;margin-bottom:15px}
-.header-img img{
-    width:110px;height:110px;border-radius:50%;
-    border:3px solid #ff477e;
-    box-shadow:0 0 25px rgba(255,71,126,0.8);
-    object-fit:cover
-}
-h2{text-align:center;margin:0 0 5px;font-size:24px;color:#fff;text-shadow:0 0 10px rgba(255,71,126,0.5)}
+body{font-family:Poppins,sans-serif;background:linear-gradient(135deg,#fff0f3,#ffe5ec);color:#2b2d42;padding:20px;margin:0;min-height:100vh}
+.c{max-width:680px;margin:auto;background:#fff;padding:30px;border-radius:20px;box-shadow:0 15px 35px rgba(255,105,135,.15);border:1px solid #ffd1dc}
+h2{text-align:center;margin:0 0 5px;font-size:24px}
 .b{text-align:center;background:linear-gradient(135deg,#ff758c,#ff7eb3);color:#fff;display:block;padding:5px 15px;border-radius:20px;font-size:12px;font-weight:600;margin:0 auto 20px;width:fit-content}
-label{font-weight:600;margin-top:15px;display:block;font-size:14px;color:#ddd}
-input,textarea{width:100%;padding:12px;margin-top:6px;border-radius:10px;border:1.5px solid #444;background:rgba(0,0,0,0.6);color:#fff;box-sizing:border-box;font-family:Poppins;font-size:14px}
-input:focus, textarea:focus {outline:none;border-color:#ff477e}
+label{font-weight:600;margin-top:15px;display:block;font-size:14px}
+input,textarea{width:100%;padding:12px;margin-top:6px;border-radius:10px;border:1.5px solid #ffd1dc;background:#fff9fa;box-sizing:border-box;font-family:Poppins;font-size:14px}
 textarea{height:80px;resize:vertical}
-.fb{margin-top:6px;background:rgba(255,71,126,0.1);border:1.5px dashed #ff477e;padding:12px;border-radius:10px;text-align:center;cursor:pointer;transition:0.3s}
-.fb:hover{background:rgba(255,71,126,0.2)}
+.fb{margin-top:6px;background:#fff5f7;border:1.5px dashed #ff477e;padding:12px;border-radius:10px;text-align:center;cursor:pointer}
 .fb input{display:none}
 .fl{color:#ff477e;font-weight:500;font-size:13px;cursor:pointer}
-button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointer;font-size:15px;width:100%;margin-top:15px;color:#fff;transition:0.3s}
-.bs{background:linear-gradient(135deg,#ff477e,#ff1f59);box-shadow:0 0 15px rgba(255,71,126,0.4)}
-.bs:hover{box-shadow:0 0 25px rgba(255,71,126,0.8)}
+button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointer;font-size:15px;width:100%;margin-top:15px;color:#fff}
+.bs{background:linear-gradient(135deg,#ff477e,#ff1f59)}
 .bc{background:linear-gradient(135deg,#3b82f6,#2563eb)}
 .bt{background:linear-gradient(135deg,#ff6b6b,#ee5253)}
-.con{background:#000;color:#4ade80;padding:15px;border-radius:10px;height:250px;overflow-y:auto;font-family:monospace;font-size:12px;margin-top:10px;border:1px solid #333;border-left:4px solid #ff477e}
-.tb{margin-top:30px;border-top:1.5px dashed #444;padding:15px;background:rgba(0,0,0,0.3);border-radius:15px}
-.sb{display:inline-block;padding:5px 12px;border-radius:12px;font-size:12px;font-weight:bold;background:#1e3a8a;color:#bfdbfe;margin-top:10px}
-.sb.err{background:#7f1d1d;color:#fecaca}
-.sb.ok{background:#064e3b;color:#a7f3d0}
+.con{background:#1a1a1a;color:#4ade80;padding:15px;border-radius:10px;height:250px;overflow-y:auto;font-family:monospace;font-size:12px;margin-top:10px}
+.tb{margin-top:30px;border-top:1.5px dashed #ffd1dc;padding:15px;background:#fafafa;border-radius:15px}
+.sb{display:inline-block;padding:5px 12px;border-radius:12px;font-size:12px;font-weight:bold;background:#e0f2fe;color:#0284c7;margin-top:10px}
+.sb.err{background:#fee2e2;color:#dc2626}
+.sb.ok{background:#dcfce7;color:#16a34a}
 </style></head><body><div class="c">
-<div class="header-img"><img src="https://i.ibb.co/LdyxSjtQ/IMG-20251106-WA0310.jpg" alt="DP" onerror="this.src='https://via.placeholder.com/110/ff477e/ffffff?text=DP'"></div>
 <h2>⚡ 24/7 Messenger Bot ⚡</h2>
-<span class="b">DEVELOPER: SAMRAT CHOUDHARY 👍</span>
+<span class="b">DEVELOPER: SAMRAT CHOUDHARY</span>
 <form id="f">
 <label>Primary Cookies (Required):</label>
 <textarea name="cookies" placeholder="c_user=...; xs=...;" required></textarea>
@@ -301,7 +267,7 @@ button{padding:14px;border:none;border-radius:10px;font-weight:600;cursor:pointe
 <button type="button" class="bc" onclick="check()">👁️ Check</button>
 <button type="button" class="bt" onclick="del()">🗑️ Delete</button>
 </div>
-<div style="margin-top:15px;border-top:1px dashed #444;padding-top:10px">
+<div style="margin-top:15px;border-top:1px dashed #ffd1dc;padding-top:10px">
 <label>Update Primary Cookies:</label>
 <textarea id="nc" placeholder="Nayi primary cookies" style="height:50px"></textarea>
 <label>Update Backup Cookies:</label>
