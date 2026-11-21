@@ -1,5 +1,4 @@
-{
-  "name": "messenger-247-bot",
+essenger-247-bot",
   "version": "1.0.0",
   "description": "24/7 Persistent Messenger Bot developed by Raj Mishra",
   "main": "index.js",
@@ -14,5 +13,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  }
+}
+18.0.0"
   }
 }
